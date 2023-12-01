@@ -62,7 +62,15 @@ define(['SuiteScripts/libs/Papa-Parse/papaparse.min.js'],
         return newData;
     }
 
+    function JSON2CSV(data) {
+        //	1. Papa.unparse, mengubah JSON to CSV
+        let newData = Papa.unparse(data);
+
+        return newData;
+    }
+
     return {
-        CSV2JSON: CSV2JSON
+        CSV2JSON: CSV2JSON,
+        JSON2CSV: JSON2CSV,
     }
 });
